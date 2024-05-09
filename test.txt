@@ -1,0 +1,20 @@
+1. Make admin panel
+    - admin
+        - admin account should be default
+        - admin can create manager (signup manager)
+        - product(crud)
+        - categories (add)
+        - subcatgeories(add)
+        - extracat - brand (add)
+        - login/logout
+
+    - manager
+        - product(add/update)
+        - categories (add)
+        - subcatgeories(add)
+        - extracat - brand (add)
+        - login/logout
+
+2. user ui
+    - product card list (only view)
+    - signup/login/logout
