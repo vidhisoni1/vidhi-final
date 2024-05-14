@@ -1,39 +1,23 @@
-<%- include('../partials/header') %>
-
-  <%- include('../partials/sidebar') %>
+<%- include('../partials/header') %> <%- include('../partials/sidebar') %>
 
 <div class="content">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">SRNO.</th>
-            <th scope="col">NAME</th>
-            <th scope="col">SUB-NAME</th>
-            <th scope="col">BRAND</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <% data.forEach((item) => { %>
-              <td><%= item.name %></td>
-              
-           <% }) %>
-           
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">SRNO.</th>
+        <th scope="col">NAME</th>
+        <!-- <th scope="col">SUB-NAME</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach((item,index) => { %>
+      <tr>
+        <td><%= index+1 %></td>
+        <td><%= item.name %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </div>
 
 <%- include('../partials/footer') %>

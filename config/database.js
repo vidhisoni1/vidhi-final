@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
-const db = async ()=>{
+const db = async () => {
     await mongoose.connect(
-        'mongodb+srv://vidhisoni8869:SCZdHQSm49NJtlu9@cluster0.va1rnsy.mongodb.net/mydatabase'
+        'mongodb://localhost:27017/vidhipr'
     );
     console.log('database connected')
 }
-module.exports = db ;
+module.exports = db;

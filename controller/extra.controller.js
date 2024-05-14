@@ -1,9 +1,15 @@
-const extraCategory =require('../models/extra.model')
+const extraCategory = require('../models/extra.model')
 
 
-const create = async(req,res) => {
-    console.log(req.body);
-    let data = await extraCategory.find().populate('extraId');
-    res.send(data)
+const get = async (req, res) => {
+    let data = await extraCategory.find();
+    res.render('pages/extraCategory', { data })
 }
-module.exports = {create};
+const addExtraCat = async (req, res) => {
+    res.render('pages/addExtraCat')
+}
+const create = async (req, res) => {
+    let data = await extraCategory.create(req.body);
+    res.redirect('/extracategory')
+}
+module.exports = { get, addExtraCat, create };
