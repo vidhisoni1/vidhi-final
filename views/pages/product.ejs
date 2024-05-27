@@ -1,0 +1,28 @@
+<%- include('../partials/header') %> <%- include('../partials/sidebar') %>
+        <div class="content flex-grow-1">
+            <%- include('../partials/navbar') %>
+                <div class="container p-3">
+                    <div class="row">
+                        <% data.forEach((product,index)=> { %>
+                            <div class="col-4">
+                                <div class="card mb-4">
+                                    <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <%= product.name %>
+                                        </h5>
+                                        <p class="card-text">
+                                            <%= product.description %>
+                                        </p>
+                                        <p class="card-text">Price: $<%= product.price %>
+                                        </p>
+                                        <a href="/product/edit/<%=product._id%>" class="btn btn-warning">Edit</a>
+                                        <a href="/product/delete/<%=product._id%>" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+        </div>
+        <%- include('../partials/footer') %>

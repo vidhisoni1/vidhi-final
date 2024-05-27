@@ -1,27 +1,28 @@
 <%- include('../partials/header') %> <%- include('../partials/sidebar') %>
 
     <div class="content">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">SRNO.</th>
-            <th scope="col">NAME</th>
-            <!-- <th scope="col">SUB-NAME</th> -->
-          </tr>
-        </thead>
-        <tbody>
-          <% data.forEach((item,index)=> { %>
+      <%- include('../partials/navbar') %>
+        <table class="table table-striped">
+          <thead>
             <tr>
-              <td>
-                <%= index+1 %>
-              </td>
-              <td>
-                <%= item.name %>
-              </td>
+              <th scope="col">SRNO.</th>
+              <th scope="col">NAME</th>
+              <!-- <th scope="col">SUB-NAME</th> -->
             </tr>
-            <% }) %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <% data.forEach((item,index)=> { %>
+              <tr>
+                <td>
+                  <%= index+1 %>
+                </td>
+                <td>
+                  <%= item.name %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
     </div>
 
     <%- include('../partials/footer') %>

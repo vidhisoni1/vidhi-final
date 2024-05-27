@@ -1,5 +1,5 @@
 {
-  "name": "category",
+  "name": "final",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,8 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoos": "^0.0.1-security",
     "mongoose": "^8.3.1"
   },

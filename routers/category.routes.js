@@ -1,7 +1,10 @@
 const { Router } = require('express');
 const { create, get, deleteAll, update, addCat } = require('../controller/category.controller');
+const authenticate = require('../middleware/auth');
 
 const catRoute = Router();
+
+catRoute.use(authenticate)
 
 catRoute.get('/', get);
 catRoute.delete('/', deleteAll);

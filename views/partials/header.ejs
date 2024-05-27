@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     /* Sidebar */
     .sidebar {
-      position: fixed;
+      /* position: fixed; */
       top: 0;
       left: 0;
-      height: 100%;
       width: 250px;
-      background-color: #343a40; /* Bootstrap's dark background color */
+      background-color: #343a40;
+      /* Bootstrap's dark background color */
       padding: 20px;
     }
 
@@ -21,9 +28,11 @@
       list-style: none;
       padding: 0;
     }
-    .cat{
+
+    .cat {
       background-color: #343a40;
     }
+
     .sidebar ul li {
       margin-bottom: 10px;
     }
@@ -34,15 +43,17 @@
     }
 
     .sidebar ul li a:hover {
-      color: #ffc107; /* Bootstrap's primary color */
+      color: #ffc107;
+      /* Bootstrap's primary color */
     }
 
     /* Content */
     .content {
-      margin-left: 250px;
-      padding: 20px;
+      flex-grow: 1;
+      padding: 5px 10px;
     }
   </style>
 </head>
+
 <body>
-   
+  <div class="d-flex" style="min-height: 100vh;">
